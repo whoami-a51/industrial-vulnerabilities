@@ -41,5 +41,4 @@ O objetivo do Stuxnet era alterar a velocidade das centrífugas de forma precisa
 
 ---
 
-> "Stuxnet foi o ponto de ruptura. Depois dele, nenhuma usina está 100% segura."
-
+Conteúdo completo: https://github.com/whoami-a51/stuxnet-info

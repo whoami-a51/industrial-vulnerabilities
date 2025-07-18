@@ -8,7 +8,7 @@ Nosso objetivo é mostrar o risco de exposição desses sistemas, conscientizand
 
 ## 🔢 Conteúdo
 
-- [Relatório 1 - Acesso Remoto a Sistemas Industriais](relatorios/)
+- [Relatório - Acesso Remoto a Sistemas Industriais](reports/)
 - [Análise - O Perigo do Stuxnet](docs/stuxnet.md)
 - [Guia - Como Identificar Honeypots](docs/como-identificar-honeypots.md) *(em breve)*
 

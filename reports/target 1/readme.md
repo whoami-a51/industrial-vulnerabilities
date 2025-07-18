@@ -2,7 +2,7 @@
 
 ## 📌 Resumo
 
-Um painel SCADA exposto publicamente, responsável pelo controle de turbinas eólicas, foi encontrado online com acesso direto a portas e serviços críticos. Isso inclui uma interface web com certificado SSL válido emitido pela Siemens, uma porta VNC aberta exigindo autenticação por senha (credenciais desconhecidas) e uma porta aberta para comunicação com CLPs Siemens S7 (porta 102). Essa exposição representa um risco severo, com possibilidade de controle remoto das turbinas por agentes não autorizados.
+Um painel SCADA vulnerável, responsável pelo controle de turbinas eólicas, foi encontrado com acesso direto a portas e serviços críticos. Isso inclui uma interface web com certificado SSL válido emitido pela Siemens, uma porta VNC aberta exigindo autenticação por senha (credenciais desconhecidas) e uma porta aberta para comunicação com CLPs Siemens S7 (porta 102). Essa exposição representa um risco severo, com possibilidade de controle remoto das turbinas por agentes não autorizados.
   
 ![descrição](/imgs/target_1/turbinas.png)  
   
@@ -51,12 +51,12 @@ Um painel SCADA exposto publicamente, responsável pelo controle de turbinas eó
 
 ## ⚠️ Riscos
 
-A exposição pública de um sistema SCADA/ICS de controle de turbinas sem mecanismos robustos de autenticação pode permitir:
+A exposição de um sistema SCADA/ICS de controle de turbinas sem mecanismos robustos de autenticação pode permitir:
 
 - Controle remoto não autorizado das turbinas (ex: iniciar/parar, alterar parâmetros)
 - Interrupção na geração de energia e possíveis danos físicos ao equipamento
 - Riscos operacionais, ambientais e de segurança
-- Ataques cibernéticos direcionados com impacto econômico e reputacional
+- Ataques cibernéticos direcionados com impacto econômico e reputacional, como uso de Stuxnet
   
 ![descrição](/imgs/target_1/controles.png)  
   

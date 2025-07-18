@@ -3,7 +3,12 @@
 ## 🔍 Resumo
 
 Foi identificado um painel SCADA exposto relacionado a um controlador Siemens S7-1200. Ele estava acessível via HTTP/HTTPS e possuía um certificado SSL válido emitido pela Siemens. Portas industriais críticas estavam abertas — notadamente VNC (5900) e ISO-TSAP (102). Embora a comunicação direta com o PLC tenha expirado (timeout), essa acessibilidade parcial ainda representa um risco significativo de segurança.
-
+  
+![descrição](/imgs/target_2/plc1.png)    
+  
+![descrição](/imgs/target_2/plc2.png)    
+  
+  
 ## 🌐 Informações do Alvo
 
 - **Endereço IP:** `xx.xxx.xxx.188`  
@@ -34,11 +39,7 @@ Foi identificado um painel SCADA exposto relacionado a um controlador Siemens S7
 - **Método de Acesso Tentado:** ISO-TSAP (porta 102)
   
 ![descrição](/imgs/target_2/plcs.png)   
-  
-![descrição](/imgs/target_2/plc1.png)    
-  
-![descrição](/imgs/target_2/plc2.png)    
-  
+    
 
 ## 🖥️ Detalhes do VNC
 
@@ -46,7 +47,7 @@ Foi identificado um painel SCADA exposto relacionado a um controlador Siemens S7
 - **Segurança:** VncAuth (protegido por senha)  
 - **Status:** Conexão aceita, falha no login devido a senha desconhecida
   
-![descrição](/imgs/target_2/vnc.png)    
+![descrição](/imgs/target_2/vnc.jpg)    
   
 ## 📸 Resumo das Evidências
 

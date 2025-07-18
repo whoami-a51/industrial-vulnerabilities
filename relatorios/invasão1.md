@@ -33,7 +33,7 @@ Um painel SCADA exposto publicamente, responsável pelo controle de turbinas eó
   - **Modo de operação**: `RUN`
   - **Status**: `OK`
   
-![descrição](/imgs/invasao1/plc1.png)  
+![descrição](/imgs/invasao1/plc1.jpg)  
   
 
 ---

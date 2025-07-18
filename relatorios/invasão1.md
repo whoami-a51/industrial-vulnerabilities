@@ -33,7 +33,7 @@ Um painel SCADA exposto publicamente, responsável pelo controle de turbinas eó
   - **Modo de operação**: `RUN`
   - **Status**: `OK`
   
-![descrição](/imgs/invasao1/plc1.jpg)  
+![descrição](/imgs/invasao1/plc1.png)  
   
 
 ---
@@ -44,7 +44,7 @@ Um painel SCADA exposto publicamente, responsável pelo controle de turbinas eó
 - A porta `5900` (VNC) aceita conexões, mas reinicia imediatamente após falha de autenticação. A ausência de bloqueio ou CAPTCHA indica configuração insegura.
 - A interface web está disponível via `HTTPS` e `HTTP`, com certificado SSL legítimo emitido pela Siemens — confirmando a autenticidade da plataforma.
 
-![descrição](/imgs/invasao1/vnc.png)  
+![descrição](/imgs/invasao1/vnc.jpg)  
 
   
 ---

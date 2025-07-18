@@ -1,4 +1,4 @@
-# Relatório de Exposição SCADA — Siemens S7-1200
+# Exposição Crítica de Dispositivos Industriais PLC's - Siemens S7-1200
 
 ## 🔍 Resumo
 

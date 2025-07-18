@@ -8,7 +8,7 @@ Nosso objetivo é mostrar o risco de exposição desses sistemas, conscientizand
 
 ## 🔢 Conteúdo
 
-- [Relatório 1 - Acesso Remoto a Sistema Industrial via VNC](relatorios/invasao1.md)
+- [Relatório 1 - Acesso Remoto a Sistemas Industriais](relatorios/)
 - [Análise - O Perigo do Stuxnet](docs/stuxnet.md)
 - [Guia - Como Identificar Honeypots](docs/como-identificar-honeypots.md) *(em breve)*
 
@@ -21,12 +21,3 @@ Este repositório tem fins exclusivamente educacionais. Nenhuma das vulnerabilid
 **Se você encontrar um sistema vulnerável, notifique o administrador responsável de forma ética.**
 
 ---
-
-## 🎓 Sobre
-
-Projeto mantido por pesquisadores independentes em segurança cibernética e tecnologia industrial. Queremos fomentar a formação de profissionais conscientes e capacitados na defesa de sistemas de controle crítico.
-
----
-
-> "Segurança não é opcional quando vidas e energia estão em jogo."
-

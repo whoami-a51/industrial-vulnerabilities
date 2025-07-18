@@ -46,7 +46,7 @@ Foi identificado um painel SCADA exposto relacionado a um controlador Siemens S7
 - **Segurança:** VncAuth (protegido por senha)  
 - **Status:** Conexão aceita, falha no login devido a senha desconhecida
   
-![descrição](/imgs/target_2/vnc.jpg)    
+![descrição](/imgs/target_2/vnc.png)    
   
 ## 📸 Resumo das Evidências
 

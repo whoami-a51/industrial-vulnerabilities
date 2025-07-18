@@ -32,6 +32,9 @@ Um painel SCADA exposto publicamente, responsável pelo controle de turbinas eó
   - **Nome da estação**: `ET 200SP station_1`
   - **Modo de operação**: `RUN`
   - **Status**: `OK`
+  
+![descrição](/imgs/plc1.png)  
+  
 
 ---
 

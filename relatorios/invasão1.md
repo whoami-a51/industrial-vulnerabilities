@@ -6,7 +6,7 @@ Foi identificado um painel SCADA exposto na internet - atráves do GHDB e Shodan
 
 ## Detalhes Técnicos
 
-- **IP alvo:** `xx.xxx.xxx.188`
+- **IP alvo:** `xxx.xxx.xxx.188`
 - **Portas abertas:**
   - 80/tcp (HTTP) – página de login customizada
   - 443/tcp (HTTPS) – página de login com certificado Siemens válido

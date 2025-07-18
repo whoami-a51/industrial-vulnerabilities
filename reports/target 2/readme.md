@@ -62,7 +62,7 @@ Foi identificado um painel SCADA exposto relacionado a um controlador Siemens S7
 - **Exposição da Interface Web:** Pode ser alvo de ataques de força bruta ou exploração remota  
 - **Exposição da Porta PLC:** Pode permitir manipulação de baixo nível via pacotes ISO-TSAP personalizados  
 - **Exposição do VNC:** Vetor comum de ataque, especialmente se senhas forem fracas ou padrão  
-- **Tipo de Sistema:** Industrial — comprometimento pode afetar processos físicos, segurança e operações
+- **Tipo de Sistema:** Industrial — comprometimento pode afetar processos físicos, segurança e operações com o uso de Stuxnet
 
 ## ✅ Recomendações
 

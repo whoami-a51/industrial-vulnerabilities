@@ -1,58 +1,66 @@
-# Relatório de Exposição SCADA — Siemens S7-1200
+# ⚠️ Exposição Crítica de Sistema SCADA para Controle de Turbinas Eólicas
 
-## Resumo
+## 📌 Resumo
 
-Foi identificado um painel SCADA exposto na internet - atráves do GHDB e Shodan, vinculado a um controlador Siemens S7-1200, acessível via HTTP/HTTPS com certificado SSL legítimo da Siemens. Estão abertas portas críticas como VNC (porta 5900) e a porta 102 (ISO-TSAP) usada para comunicação com PLC. Tentativas de comunicação direta com o PLC resultaram em timeout, indicando possível proteção ou firewall. O VNC exige senha, mas pode ser vulnerável a senhas fracas.
-
-## Detalhes Técnicos
-
-- **IP alvo:** `xxx.xxx.xxx.188`
-- **Portas abertas:**
-  - 80/tcp (HTTP) – página de login customizada
-  - 443/tcp (HTTPS) – página de login com certificado Siemens válido
-  - 102/tcp (ISO-TSAP) – porta de comunicação Siemens S7 PLC
-  - 5900/tcp (VNC) – servidor VNC com autenticação
-
-- **Certificado SSL:**
-  - Emitido por Siemens AG, família S7-1200
-  - Validade: 31/12/2011 a 01/01/2042
-  - CN: 192.168.1.10
-  - SAN: inclui IP interno 192.168.1.10
-
-- **Informações do PLC:**
-  - Modelo: Siemens S7-1200
-  - Comunicação via porta 102 resultou em timeout
-
-- **VNC:**
-  - Porta 5900 ativa com VncAuth 
-  - Conexão aceita, mas falha com possível firewall
-
-## Evidências
-
-- Interfaces HTTP/HTTPS acessíveis publicamente
-- Certificado SSL legítimo da Siemens
-- Porta 102 aberta indicando exposição do protocolo industrial
-- Porta VNC aberta, com proteção via senha (possivelmente fraca)
-- Comunicação com PLC parcialmente possível, mas sem sucesso
-
-## Riscos
-
-- Ataques de força bruta e exploração via interface web
-- Manipulação direta do PLC via porta 102 aberta
-- Ataques via VNC se senhas forem fracas ou padrão
-- Impacto grave em processos industriais e segurança operacional
-
-## Recomendações
-
-1. Isolar sistemas SCADA e PLC da internet pública
-2. Usar VPN ou redes internas confiáveis para acesso remoto
-3. Aplicar senhas fortes e autenticação multifator (MFA)
-4. Manter firmware e software Siemens atualizados
-5. Bloquear portas 102 e 5900 para acessos não autorizados
-6. Monitorar acessos e tentativas de login continuamente
+Um painel SCADA exposto publicamente, responsável pelo controle de turbinas eólicas, foi encontrado online com acesso direto a portas e serviços críticos. Isso inclui uma interface web com certificado SSL válido emitido pela Siemens, uma porta VNC aberta exigindo autenticação por senha (credenciais desconhecidas) e uma porta aberta para comunicação com CLPs Siemens S7 (porta 102). Essa exposição representa um risco severo, com possibilidade de controle remoto das turbinas por agentes não autorizados.
 
 ---
 
-**Relatório por:** Whoami-a51  
-**Data:** 18, Julho de 2025
+## 🔍 Detalhes Técnicos
 
+- **IP Alvo**: `xxx.xxx.xxx.214`
+
+- **Portas Abertas**:
+  - `443/tcp (HTTPS)`: Painel de controle web do sistema de turbinas eólicas
+  - `5900/tcp (VNC)`: Servidor VNC com autenticação por senha (`VncAuth`, senha desconhecida)
+  - `8081/tcp (HTTP)`: Serviço web adicional
+  - `102/tcp (iso-tsap)`: Porta de comunicação com CLP Siemens S7 (protocolo S7comm)
+
+- **Certificado SSL**:
+  - Emitido por: **Siemens TIA Project** – `NegMicon500_11_cert (EC)`
+  - Validade: **20/03/2023** a **20/03/2037**
+  - CN: `NegMicon52/Webserver-4`
+  - Subject Alternative Names (SANs):
+    - `192.168.4.10` (IP interno)
+    - `xxx.xxx.xxx.214` (IP externo)
+
+- **Informações do CLP**:
+  - **Modelo**: `CPU 1510SP-1 PN`
+  - **Nome da estação**: `ET 200SP station_1`
+  - **Modo de operação**: `RUN`
+  - **Status**: `OK`
+
+---
+
+## 🧪 Evidências
+
+- A porta TCP `102` está aberta e responde à sondagem; tentativas de comunicação via biblioteca `snap7` falharam com `timeout`, sugerindo uso de firewall ou controle parcial.
+- A porta `5900` (VNC) aceita conexões, mas reinicia imediatamente após falha de autenticação. A ausência de bloqueio ou CAPTCHA indica configuração insegura.
+- A interface web está disponível via `HTTPS` e `HTTP`, com certificado SSL legítimo emitido pela Siemens — confirmando a autenticidade da plataforma.
+
+---
+
+## ⚠️ Riscos
+
+A exposição pública de um sistema SCADA/ICS de controle de turbinas sem mecanismos robustos de autenticação pode permitir:
+
+- Controle remoto não autorizado das turbinas (ex: iniciar/parar, alterar parâmetros)
+- Interrupção na geração de energia e possíveis danos físicos ao equipamento
+- Riscos operacionais, ambientais e de segurança
+- Ataques cibernéticos direcionados com impacto econômico e reputacional
+
+---
+
+## ✅ Recomendações
+
+- Isolar totalmente os sistemas SCADA da internet pública, limitando o acesso apenas via VPNs e redes internas confiáveis.
+- Aplicar autenticação forte no VNC, com senhas seguras e exclusivas. Considere usar autenticação multifator (MFA).
+- Implementar firewalls e monitoramento contínuo das portas críticas (102, 5900, 443, 8081).
+- Manter o Siemens TIA Portal, firmwares e software relacionados sempre atualizados com os últimos patches de segurança.
+- Realizar auditorias de segurança completas e testes de intrusão voltados para a infraestrutura ICS/SCADA.
+
+---
+
+
+**Relatório produzido por**:  
+`Whoami-a51`

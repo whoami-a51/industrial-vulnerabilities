@@ -1,11 +1,19 @@
-# Relatórios de Invasões Indústriais e Exploits
+Relatórios de Invasões em Sistemas Críticos
 
-Este repositório contém relatórios detalhados das invasões e explorações que documentamos, com exemplos práticos e explicações sobre os perigos associados, incluindo o famoso worm Stuxnet.
+Este repositório documenta exemplos reais e educativos de invasões em sistemas conectados à internet, com foco em ambientes industriais, SCADA, e infraestruturas críticas.
 
-O objetivo é compartilhar conhecimento para conscientizar sobre vulnerabilidades e os riscos reais no mundo da segurança da informação.
+Nosso objetivo é mostrar o risco de exposição desses sistemas, conscientizando profissionais e empresas sobre a importância de proteção, monitoração e isolamento adequado.
 
-## Conteúdo
+🔢 Conteúdo
 
-- Relatórios detalhados de invasões
-- Exemplos de exploits e payloads
-- Análise e explicação do Stuxnet e seus impactos
+Relatório 1 - Acesso Remoto a Sistema Industrial via VNC
+
+Análise - O Perigo do Stuxnet
+
+Guia - Como Identificar Honeypots (em breve)
+
+⚖️ Aviso Legal
+
+Este repositório tem fins exclusivamente educacionais. Nenhuma das vulnerabilidades relatadas foi explorada de forma maliciosa. Todas as interações foram observacionais, e nenhum sistema foi alterado ou comprometido.
+
+Se você encontrar um sistema vulnerável, notifique o administrador responsável de forma ética.

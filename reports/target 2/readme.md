@@ -77,5 +77,7 @@ Foi identificado um painel SCADA exposto relacionado a um controlador Siemens S7
 
 > ⚠️ Este relatório é fornecido para fins educacionais e de divulgação responsável.
 
-**Relatório gerado por:** `Whoami-a51`  
-**Data:** `18 de julho de 2025`
+**Relatório gerado por:**
+`Whoami-a51`  
+
+

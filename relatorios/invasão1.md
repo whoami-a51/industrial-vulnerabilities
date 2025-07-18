@@ -1,84 +1,58 @@
-# Relatório de Invasão 1 — Acesso Remoto a Sistema Industrial via VNC
+# Relatório de Exposição SCADA — Siemens S7-1200
 
-## 🧠 Contexto
+## Resumo
 
-Durante uma varredura passiva utilizando o Shodan, identificamos múltiplos hosts industriais expostos na internet com portas e serviços potencialmente inseguros — entre eles, sistemas SCADA com acesso remoto habilitado via VNC **sem autenticação**.
+Foi identificado um painel SCADA exposto na internet - atráves do GHDB e Shodan, vinculado a um controlador Siemens S7-1200, acessível via HTTP/HTTPS com certificado SSL legítimo da Siemens. Estão abertas portas críticas como VNC (porta 5900) e a porta 102 (ISO-TSAP) usada para comunicação com PLC. Tentativas de comunicação direta com o PLC resultaram em timeout, indicando possível proteção ou firewall. O VNC exige senha, mas pode ser vulnerável a senhas fracas.
 
-Esses dispositivos estavam relacionados a controladores de turbinas industriais e sistemas de automação crítica.
+## Detalhes Técnicos
 
-## 🔍 Fase de Reconhecimento
+- **IP alvo:** `xx.xxx.xxx.188`
+- **Portas abertas:**
+  - 80/tcp (HTTP) – página de login customizada
+  - 443/tcp (HTTPS) – página de login com certificado Siemens válido
+  - 102/tcp (ISO-TSAP) – porta de comunicação Siemens S7 PLC
+  - 5900/tcp (VNC) – servidor VNC com autenticação
 
-### Ferramenta utilizada:
-- **Shodan**
+- **Certificado SSL:**
+  - Emitido por Siemens AG, família S7-1200
+  - Validade: 31/12/2011 a 01/01/2042
+  - CN: 192.168.1.10
+  - SAN: inclui IP interno 192.168.1.10
 
-### Query usada:
-```sh
-port:5900 has_screenshot:true
-```
+- **Informações do PLC:**
+  - Modelo: Siemens S7-1200
+  - Comunicação via porta 102 resultou em timeout
 
-Essa query retorna instâncias de VNC com tela acessível (screenshot) — o que muitas vezes indica ausência de autenticação.
+- **VNC:**
+  - Porta 5900 ativa com VncAuth 
+  - Conexão aceita, mas falha com possível firewall
 
-### Observações:
-- Host localizado em rede industrial (ASN confirmada de energia ou manufatura).
-- VNC com **autenticação desabilitada** (`authentication disabled` no banner).
-- Visualização direta da interface SCADA (monitoramento de turbinas, pressão e temperatura).
-- Sistema operando em tempo real.
+## Evidências
 
-## 🎯 Acesso Remoto
+- Interfaces HTTP/HTTPS acessíveis publicamente
+- Certificado SSL legítimo da Siemens
+- Porta 102 aberta indicando exposição do protocolo industrial
+- Porta VNC aberta, com proteção via senha (possivelmente fraca)
+- Comunicação com PLC parcialmente possível, mas sem sucesso
 
-Utilizamos o **VNC Viewer** para conexão direta à interface remota:
+## Riscos
 
-```
-vncviewer <IP>:5900
-```
+- Ataques de força bruta e exploração via interface web
+- Manipulação direta do PLC via porta 102 aberta
+- Ataques via VNC se senhas forem fracas ou padrão
+- Impacto grave em processos industriais e segurança operacional
 
-O acesso foi concedido **sem solicitação de senha**, possibilitando interação direta com a HMI (Interface Homem-Máquina) da turbina.
+## Recomendações
 
-## 🛠️ Capacidade de Controle
-
-Dentro da interface observada, foi possível:
-
-- Alterar parâmetros de rotação e carga
-- Iniciar ou parar turbinas
-- Modificar valores de setpoint
-- Visualizar alarmes e eventos críticos
-
-> ⚠️ **Nota**: Nenhuma alteração real foi feita no sistema. A exploração foi puramente observacional e ética.
-
-## 🢨 Perigos e Impacto
-
-Esse tipo de exposição representa **risco extremo** à infraestrutura crítica. Um invasor poderia:
-
-- Paralisar uma linha de produção
-- Causar sobrecarga em turbinas, gerando dano físico
-- Iniciar acidentes operacionais com risco humano
-- Sabotar remotamente uma instalação energética
-
-## 🚒 Mitigações Recomendadas
-
-- Desabilitar acesso VNC público
-- Exigir autenticação robusta (com senha forte ou chave)
-- Isolar redes industriais (air gap ou firewall)
-- Utilizar VPN com autenticação para acesso remoto
-- Monitorar tráfego e implementar SIEM
-
-## 📎 Evidências (anonimizadas)
-
-- IP parcialmente ocultado: `xxx.xxx.121.84`
-- ASN: ISP de energia regional
-- Screenshot ofuscado salvo em: `/evidencias/vnc_turbina_01.png`
-
-## 🧪 Ferramentas Envolvidas
-
-- `shodan.io`
-- `vncviewer` (RealVNC)
-- `whois`, `nmap` para enriquecimento
-
-## ✅ Conclusão
-
-Esse caso mostra como **sistemas industriais expostos sem autenticação mínima representam risco nacional**. A facilidade com que um invasor pode assumir controle de turbinas reforça a necessidade urgente de revisão das políticas de segurança OT/ICS (Operational Technology / Industrial Control Systems).
+1. Isolar sistemas SCADA e PLC da internet pública
+2. Usar VPN ou redes internas confiáveis para acesso remoto
+3. Aplicar senhas fortes e autenticação multifator (MFA)
+4. Manter firmware e software Siemens atualizados
+5. Bloquear portas 102 e 5900 para acessos não autorizados
+6. Monitorar acessos e tentativas de login continuamente
 
 ---
 
-> Relatório gerado para fins educacionais e de conscientização em cibersegurança industrial.
+**Relatório por:** Whoami-a51  
+**Data:** 18, Julho de 2025
 

@@ -1,6 +1,6 @@
 # Relatórios de Invasões em Sistemas Críticos
 
-Este repositório documenta exemplos reais e educativos de invasões em sistemas conectados à internet, com foco em ambientes industriais, SCADA, e infraestruturas críticas.
+Este repositório documenta exemplos reais de invasões em sistemas conectados à internet, com foco em ambientes industriais, SCADA, e infraestruturas críticas.
 
 Nosso objetivo é mostrar o risco de exposição desses sistemas, conscientizando profissionais e empresas sobre a importância de proteção, monitoração e isolamento adequado.
 

@@ -32,13 +32,22 @@ Foi identificado um painel SCADA exposto relacionado a um controlador Siemens S7
 - **Modelo:** Siemens S7-1200  
 - **Status da Comunicação:** Timeout na porta 102 (provavelmente protegido por ACL/firewall)  
 - **Método de Acesso Tentado:** ISO-TSAP (porta 102)
+  
+![descrição](/imgs/target_2/plcs.png)   
+  
+![descrição](/imgs/target_2/plc1.png)    
+  
+![descrição](/imgs/target_2/plc2.png)    
+  
 
 ## 🖥️ Detalhes do VNC
 
 - **Porta:** `5900`  
 - **Segurança:** VncAuth (protegido por senha)  
 - **Status:** Conexão aceita, falha no login devido a senha desconhecida
-
+  
+![descrição](/imgs/target_2/vnc.jpg)    
+  
 ## 📸 Resumo das Evidências
 
 - Painéis de login web servidos pelas portas `80` e `443`  

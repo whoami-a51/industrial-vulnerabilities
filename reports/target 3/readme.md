@@ -4,7 +4,7 @@
 
 Durante a continuidade da pesquisa OSINT voltada para a exposição de infraestruturas SCADA e ICS, foram identificados **dois dispositivos OPND** (Operational Network Peripheral Device) acessíveis via IPs públicos. Ambos estavam localizados na **República Tcheca**, com acesso remoto desprotegido e exibindo em tempo real valores de sensores de temperatura, umidade e outros parâmetros de uma infraestrutura industrial de Data Center.
   
-![descrição](/imgs/target_2/data%20center%201.png.png)    
+![descrição](/imgs/target_2/data%20center%201.png)    
   
 ![descrição](/imgs/target_3/data%20center%202.png)    
   
@@ -33,7 +33,11 @@ Durante a continuidade da pesquisa OSINT voltada para a exposição de infraestr
 - **Paralisação de Infraestrutura**: risco de superaquecimento de servidores ou linhas de produção
 - **Escalonamento de Ataques**: uso da rede local como ponto pivô para ataques laterais
 - **Não conformidade com normas industriais** como **IEC 62443**, **NIS2** e **ISO 27001**
-
+  
+![descriçãp](/imgs/target_3/controle%20de%20temp%201.png)
+![descrição](/imgs/target_3/input%20de%20entrada.png)
+![descrição](/imgs/target_3/controle%20de%20temp%202.png)
+  
 ---
 
 ## 🔎 Evidências

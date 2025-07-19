@@ -1,4 +1,4 @@
-# Relatório de Invasão 3 — Exposição de Dois Dispositivos OPND em Rede Industrial
+## Exposição de Dois Dispositivos OPND em Rede Industrial
 
 ## 🧠 Contexto
 

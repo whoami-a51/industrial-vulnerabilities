@@ -40,6 +40,8 @@ Durante a continuidade da pesquisa OSINT voltada para a exposição de infraestr
 ![descriçãp](/imgs/target_3/controle%20de%20temp%201.png)
 ![descrição](/imgs/target_3/input%20de%20entrada.png)
 ![descrição](/imgs/target_3/controle%20de%20temp%202.png)
+![descrição](/imgs/target_3/vnc.jpg)
+![descrição](/imgs/target_3/iso.jpg)
   
 ---
 

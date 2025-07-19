@@ -10,8 +10,8 @@ Durante a continuidade da pesquisa OSINT voltada para a exposição de infraestr
 
 | IP               | Localização          | Status   | Informções Sensíveis            |
 |------------------|------------------------|----------|------------------------------|
-| 217.117.216.169  | Zlin, Czech Republic   | Online   | Temperatura, Umidade, Logs   |
-| 217.117.216.170  | Zlin, Czech Republic   | Online   | Interface de controle ativa |
+| xxx.xxx.xxx.169  | Zlin, Czech Republic   | Online   | Temperatura, Umidade, Logs   |
+| xxx.xxx.xxx.170  | Zlin, Czech Republic   | Online   | Interface de controle ativa |
 
 ---
 

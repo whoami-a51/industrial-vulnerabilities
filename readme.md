@@ -8,9 +8,9 @@ O objetivo é mostrar o risco de exposição desses sistemas, conscientizando pr
 
 ## 🔢 Conteúdo
 
-- [Relatório - Acesso Remoto ao Sistema SCADA Industriais de Controle de Turbinas](reports/target%1)
-- [Relatório - Acesso Remoto aos Dispositivos Industriais PLCs](reports/target%2)
-- [Relatório - Acesso Remoto aos Painéis de Controle de Data Centers](reports/target%3)
+- [Relatório - Acesso Remoto ao Sistema SCADA Industriais de Controle de Turbinas](reports/target%201/)
+- [Relatório - Acesso Remoto aos Dispositivos Industriais PLCs](reports/target%202/)
+- [Relatório - Acesso Remoto aos Painéis de Controle de Data Centers](reports/target%203/)
 - [Análise - O Perigo do Malware Stuxnet](docs/stuxnet.md)
 - [Guia - Como Identificar Honeypots](docs/como-identificar-honeypots.md) *(em breve)*
 

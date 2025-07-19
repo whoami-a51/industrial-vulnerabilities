@@ -72,6 +72,7 @@ A exposição de um sistema SCADA/ICS de controle de turbinas sem mecanismos rob
 
 ---
 
+> Este relatório foi produzido com o objetivo de promover a conscientização em cibersegurança para ambientes industriais (ICS/SCADA). Nenhuma alteração foi realizada nos sistemas analisados.
 
-**Relatório produzido por**:  
-`Whoami-a51`
+**Relatório gerado por:**
+`Whoami-a51`  

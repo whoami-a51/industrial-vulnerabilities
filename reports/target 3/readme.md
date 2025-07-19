@@ -3,7 +3,11 @@
 ## 🧠 Contexto
 
 Durante a continuidade da pesquisa OSINT voltada para a exposição de infraestruturas SCADA e ICS, foram identificados **dois dispositivos OPND** (Operational Network Peripheral Device) acessíveis via IPs públicos. Ambos estavam localizados na **República Tcheca**, com acesso remoto desprotegido e exibindo em tempo real valores de sensores de temperatura, umidade e outros parâmetros de uma infraestrutura industrial de Data Center.
-
+  
+![descrição](/imgs/target_2/data center 1.png)    
+  
+![descrição](/imgs/target_3/data center 2.png)    
+  
 ---
 
 ## 📂 Dispositivos Identificados

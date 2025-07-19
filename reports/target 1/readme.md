@@ -1,4 +1,4 @@
-# ⚠️ Exposição Crítica de Sistema SCADA para Controle de Turbinas Eólicas
+# ⚠️ Exposição Crítica de Sistema SCADA de Controle de Turbinas Eólicas
 
 ## 📌 Resumo
 

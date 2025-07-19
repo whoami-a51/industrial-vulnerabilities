@@ -56,3 +56,5 @@ A exposição de dispositivos OPND em redes industriais representa um dos vetore
 
 > Este relatório foi produzido com o objetivo de promover a conscientização em cibersegurança para ambientes industriais (ICS/SCADA). Nenhuma alteração foi realizada nos sistemas analisados.
 
+**Relatório gerado por:**
+`Whoami-a51`  

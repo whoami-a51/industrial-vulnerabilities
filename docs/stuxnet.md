@@ -41,4 +41,4 @@ O objetivo do Stuxnet era alterar a velocidade das centrífugas de forma precisa
 
 ---
 
-Conteúdo completo: https://github.com/whoami-a51/stuxnet-info
+> Conteúdo completo: https://github.com/whoami-a51/stuxnet-info

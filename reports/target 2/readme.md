@@ -75,9 +75,7 @@ Foi identificado um painel SCADA exposto relacionado a um controlador Siemens S7
 
 ---
 
-> ⚠️ Este relatório é fornecido para fins educacionais e de divulgação responsável.
+> Este relatório foi produzido com o objetivo de promover a conscientização em cibersegurança para ambientes industriais (ICS/SCADA). Nenhuma alteração foi realizada nos sistemas analisados.
 
 **Relatório gerado por:**
 `Whoami-a51`  
-
-

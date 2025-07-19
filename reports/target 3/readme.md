@@ -24,6 +24,9 @@ Durante a continuidade da pesquisa OSINT voltada para a exposição de infraestr
 - **Shodan**: descoberta de dispositivos por fingerprint ("OPND Web Server")
 - **Porta 80/TCP**: acesso direto ao painel HTTP sem autenticação
 - **Inspeção Manual**: identificação de sensores e controles remotos expostos
+- **Porta 109/TCP**: tentativas de comunicação via protocolo ISO-on-TCP (utilizado por PLCs Siemens) resultaram consistentemente em Connection timed out, indicando que a porta está filtrada ou dropando conexões silenciosamente. Tentativas em múltiplos racks e slots (0–5) não obtiveram resposta. Há possibilidade de firewall industrial ou ACL de camada 3/4 negando interação externa.
+- **Porta 5900/TCP (VNC)**: servidor VNC acessível publicamente; conexão estabelecida, mas encerrada com erro Connection reset by peer, sugerindo bloqueio por política ou exigência de autenticação específica
+- **Inspeção Manual**: identificação de sensores, atuadores e controles remotos expostos via interfaces web e serviços auxiliares
 
 ---
 

@@ -17,9 +17,7 @@ O objetivo é mostrar o risco de exposição desses sistemas, conscientizando pr
 ---
 
 > ⚖️ Aviso Legal
-
-> Este repositório tem fins exclusivamente educacionais. Nenhuma das vulnerabilidades relatadas foi explorada de forma maliciosa. Todas as interações foram observacionais, e nenhum sistema foi alterado ou comprometido.
-
-> **Se você encontrar um sistema vulnerável, notifique o administrador responsável de forma ética.**
+Este repositório tem fins exclusivamente educacionais. Nenhuma das vulnerabilidades relatadas foi explorada de forma maliciosa. Todas as interações foram observacionais, e nenhum sistema foi alterado ou comprometido.
+**Se você encontrar um sistema vulnerável, notifique o administrador responsável de forma ética.**
 
 ---
